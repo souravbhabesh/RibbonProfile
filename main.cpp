@@ -69,7 +69,7 @@ int main(int argc, char **argv)
 
   frame_cnt=START_FRAME;
   //Looping through frames from a START to END frame
-  for(int frames=START_FRAME;frames<=END_FRAME;frames++)
+  for(int frames=START_FRAME+FRAMES/2;frames<=END_FRAME+FRAMES/2;frames++)
   {
 	load_gsd(trajectory_file,frames);	
 	width_hgt(frame_cnt);
