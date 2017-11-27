@@ -67,13 +67,13 @@ void load_gsd( char fname[30], uint64_t frame)
 */
   if(frame==0)
   {
-          printf("\n# bonds = %d\n",Nb);
+          //printf("\n# bonds = %d\n",Nb);
   /*        for(int i=0;i<Nb;i++)
           {
                 //printf("%d %d\n",bondGroup[2*i],bondGroup[2*i+1]);
           }
   */
-          printf("# dihedrals = %d\n",Nd);
+          //printf("# dihedrals = %d\n",Nd);
   /*
           for(int i=0;i<Nd;i++)
           {

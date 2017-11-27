@@ -14,11 +14,11 @@ int initialize()
 {
    for(int i=0;i<FRAMES;i++)
    {
-        for(int j=0;j<2*nx;j++)
+        for(int j=0;j<2*NX;j++)
         {
            h_width[i][j]=0;
         }
-        for(int k=0;k<nx;k++)
+        for(int k=0;k<NX;k++)
         {
            h_bb[i][k]=0;
         }
@@ -47,7 +47,7 @@ int bb_hgt(int frame)
 /*
  if(frame == 0)
  {
-        for(int i=0;i<nx;i++)
+        for(int i=0;i<NX;i++)
         {
                 printf("%d\t%.8f\n",i,h_bb[frame][i]);
         }
@@ -61,19 +61,19 @@ int bb_hgt(int frame)
 int width_hgt(int frame)
 {
   int k=0,j=0,k_cnt,j_cnt;
-  for(int i=0;i<nx;i++)
+  for(int i=0;i<NX;i++)
   {
 	do {
 	   //if (frame==0)
-		//printf("%d\t%d\t%d\t%.8f\n",N,i,(i/2)+2*k*nx,position[3*((i/2)+2*k*nx)+2]);         
-	   h_width[frame][i] += position[3*(i+2*k*nx)+2];
+		//printf("%d\t%d\t%d\t%.8f\n",N,i,(i/2)+2*k*NX,position[3*((i/2)+2*k*NX)+2]);         
+	   h_width[frame][i] += position[3*(i+2*k*NX)+2];
 	   k++;
-	}while((i+2*k*nx) < N);
+	}while((i+2*k*NX) < N);
 	k_cnt = k;
 	k=0;
   }
 
-  for(int i=0;i<nx;i++)
+  for(int i=0;i<NX;i++)
   {
         h_width[frame][i] = h_width[frame][i]/k_cnt;
         //if(frame == 0)
